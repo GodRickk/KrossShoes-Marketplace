@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Kross shoes</title>
+  {{> sharedStyles}}
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  {{> loadtime}}
+  <!--<script src="js/pageload.js" type="text/javascript"></script>-->
+</head>
+<body>
+{{> btnUp}}
+{{> header}}
+
+<main>
+  <div class="wellcome">
+    <div class="wellcome-text__container">
+      <div class="wellcome-text__item">
+        Новая коллекция 2023
+      </div>
+      <div class="wellcome-text__item">
+        Самые последние релизы
+      </div>
+      <div class="wellcome-text__item">
+        Уже на
+      </div>
+      <div class="wellcome-text__item">
+        KrossShoes
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content__container">
+    <div class="liner__container">
+                <span class="liner-title">
+                    Бренды
+                </span>
+    </div>
+
+    <div class="brands__container" id="beauteful-carusel">
+      <div class="owl-carousel owl-theme" id="slider">
+        <img class="" src="img/brands/asics.png" alt="">
+        <img class="" src="img/brands/puma.png" alt="">
+        <img class="" src="img/brands/adidas.png" alt="">
+        <img class="" src="img/brands/NB.png" alt="">
+        <img class="" src="img/brands/Nike.png" alt="">
+      </div>
+    </div>
+  </div>
+</main>
+
+<button id="butt-test">TECY</button>
+
+{{> footer}}
+{{> sharedScripts}}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    const slider = $("#slider").owlCarousel({
+      loop:true,
+      margin:167,
+      nav:true,
+      navText: [
+        '<svg width="35" height="35" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+        '<svg width="35" height="35" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
+      ],
+      responsive:{
+        0:{
+          items:1,
+        },
+        300: {
+          items:2,
+          margin:67
+        },
+        600:{
+          items:3,
+          margin:87
+        },
+        900:{
+          items:4,
+          margin:107
+        },
+        1200:{
+          items:5,
+          margin:117
+        },
+        1400:{
+          items:5,
+          margin:147
+        }
+      }
+    });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.0/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="js/toast.js"></script>
+</body>
+</html>

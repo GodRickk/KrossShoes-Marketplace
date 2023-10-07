@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  {{> sharedStyles}}
+  {{> loadtime}}
+  <!--<script src="js/pageload.js" type="text/javascript"></script>-->
+  <title>Товары</title>
+</head>
+
+<body>
+{{> btnUp}}
+{{> header}}
+
+<main>
+  <div class="main-content__container">
+    <div class="product__wrapper">
+      <div class="product">
+        
+        {{!-- <div class="product-item">
+          <img src="img\products\Nike-SB-Air-Trainer-1-Chlorophyl-1.png"/>
+          <div class="product-description ">
+            <div>jfsjkame</div>
+            <div>Размер</div>
+            <div>Цена</div>
+            <button class="product-open-info-button">
+              <img src="img\products\cart.png">
+            </button>
+          </div>
+        </div> --}}
+
+        
+          {{#each res}}
+            <div class="product-item">
+              <img src="img\products\Nike-SB-Air-Trainer-1-Chlorophyl-1.png"/>
+              <div class="product-description ">
+                <div>{{this.name}}</div>
+                <div>{{this.size}}</div>
+                <div>{{this.price}}</div>
+                <button class="product-open-info-button">
+                  <img src="img\products\cart.png">
+                </button>
+              </div>
+            </div>
+          {{/each}}
+
+        <div class="product-item">
+          <img src="img\products\Nike-Air-Force-1-Carhartt-WIP-2.png"/>
+          <div class="product-description ">
+            <div>Nike Air Force 1 Carhartt WIP</div>
+            <div>39</div>
+            <div>16500</div>
+            <button class="product-open-info-button">
+              <img src="img\products\cart.png">
+            </button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="img\products\Air-Jordan-1-Retro-Low-Reverse-Bred-3.png"/>
+          <div class="product-description ">
+            <div>Air Jordan 1 Retro Low Reverse Bred</div>
+            <div>42</div>
+            <div>43000</div>
+            <button class="product-open-info-button">
+              <img src="img\products\cart.png">
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</main>
+
+
+{{> footer}}
+{{!-- <div class="product-info-window-background">
+  <form class="product-info-window">
+    <div class="review-form-title">
+      <img class="close-product-info-window" src="img/form/close-kross.png">
+      <h3>Ваш отзыв</h3>
+    </div>
+    <div class="review-form-main-content">
+      <label>
+        <input id="text-review" placeholder="Ваш текст..." required type="text">
+      </label>
+      <label>
+        <input id="user-name" placeholder="Имя пользователя..." required type="text">
+      </label>
+      <button class="review-submit-button" type="submit">Отправить</button>
+    </div>
+  </form>
+</div> --}}
+
+
+<div class="product-info-window-background">
+  <form class="product-info-window">
+    <div class="review-form-title">
+      <img class="close-product-info-window" src="img/form/close-kross.png">
+    </div>
+    <div class="product-info-window-content">
+      <img src="img\products\Nike-SB-Air-Trainer-1-Chlorophyl-1.png"/>
+      <div class="product-description ">
+          <div>Кроссовок name</div>
+          <div>Размер</div>
+          <div>Цена</div>
+          <button class="product-open-info-button">
+            <img src="img\products\cart.png">
+          </button>
+    </div>
+  </form>
+</div> 
+
+
+{{> sharedScripts}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.0/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="js/toast.js"></script>
+<script src="js/product-info-open.js"></script>
+</body>
+</html>

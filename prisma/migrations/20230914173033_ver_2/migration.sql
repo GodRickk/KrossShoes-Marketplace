@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Review" ALTER COLUMN "publication_date" SET DEFAULT CURRENT_TIMESTAMP;

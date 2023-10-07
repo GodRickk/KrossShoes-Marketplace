@@ -1,0 +1,21 @@
+<header class = "header">
+  <div class="header__logo">
+    <a href="/" class="logo__link">
+      <img src="img\header\logo-KrossShoes.png" alt="logo" class="logo__pic">
+    </a>
+  </div>
+
+  <nav class="header__navmenu">
+    {{#if data.isLogged}}
+      <a class="header__navmenu-item" href="login.html">Выход</a>
+    {{else}}
+      <a class="header__navmenu-item" href="login.html">Вход</a>
+    {{/if}}
+    <a class="header__navmenu-item" href="/product">Товары</a>
+    <a class="header__navmenu-item" href="makingOrder.html">Корзина</a>
+    <a class="header__navmenu-item" href="/reviews">Отзывы</a>
+  </nav>
+
+  <div class="header__nav-border-line">
+  </div>
+</header>

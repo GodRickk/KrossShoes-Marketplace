@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+        <h1 class="login-text">
+            <a class="login-text" href="/">KrossShoes</a>
+            <b class="login-text">Order</b>
+        </h1>
+        <form method="post">
+            <div class="login-form-container">
+                <label>
+                    <input name="email" placeholder="Email" required type="text">
+                </label>
+                    <input name="name" placeholder="Name" required type ="text">
+                </label>
+                <label>
+                    <input name="surname" placeholder="Surname" required type ="text">
+                </label>
+                <label>
+                    <input name="phone_number" placeholder="Phone number" required type ="tel">
+                </label>
+                <label>
+                    <input name="delivery_adress" placeholder="Delivery adress" required type ="text">
+                </label>
+            </div>
+            <button type="submit" class="btn-login">Confirm</button>
+        </form>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.0/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="js/toast.js"></script>    
+</body>
+</html>
